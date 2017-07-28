@@ -1,0 +1,19 @@
+{
+  "name": "flashcard-generator",
+  "version": "1.0.0",
+  "description": "API to build flashcards",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbdiViklas/flashcard-generator.git"
+  },
+  "author": "Andy Bonner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbdiViklas/flashcard-generator/issues"
+  },
+  "homepage": "https://github.com/AbdiViklas/flashcard-generator#readme"
+}
