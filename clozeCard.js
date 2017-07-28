@@ -6,7 +6,6 @@ var ClozeCard = function (text, cloze) {
       this.fullText = text;
       this.cloze = cloze.trim();
       this.partial = text.replace(cloze, "...");
-      console.log(this);
     }
   } else {
     return new ClozeCard(text, cloze);
