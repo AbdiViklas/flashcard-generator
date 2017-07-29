@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/AbdiViklas/flashcard-generator/issues"
   },
-  "homepage": "https://github.com/AbdiViklas/flashcard-generator#readme"
+  "homepage": "https://github.com/AbdiViklas/flashcard-generator#readme",
+  "dependencies": {
+    "inquirer": "^3.2.1"
+  }
 }
