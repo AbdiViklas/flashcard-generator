@@ -28,19 +28,24 @@ inquirer.prompt([
     .then(answers => {
       // using the answers, construct a new basic card and log it
       var newBasic = new basicCard(answers.front, answers.back);
-      console.log(`  BASIC: \n  Front: ${newBasic.front}\n  Back: ${newBasic.back}`)
+      console.log(`  BASIC:\n  Front: ${newBasic.front}\n  Back: ${newBasic.back}`);
     });
   } else {
     // if user chooses cloze-deleted card, get values for full text and cloze
+    inquirer.prompt([
+      {
+        name: "full",
+        type: "input",
+        message: "Give the complete sentence, including the part to be deleted:"
+      }, {
+        name: "cloze",
+        type: "input",
+        message: "Give the portion to be hidden, exactly as it appears in the full sentence (capatilization and spelling count):"
+      }
+    ])
+    .then(answers => {
+      var newCloze = new clozeCard(answers.full, answers.cloze);
+      console.log(`  CLOZE-DEL:\n  Partial: ${newCloze.partial}\n  Full: ${newCloze.fullText}`);
+    });
   }
 });
-
-// var georgeBasic = new basicCard("Who the first prez?", "Georgie W., baby!");
-
-// var georgeCloze = clozeCard("George Washington was the first president.", "george Washington");
-
-// console.log(`
-//   CLOZE-DEL:
-//   Partial: ${georgeCloze.partial}
-//   Full: ${georgeCloze.fullText}
-// `);
